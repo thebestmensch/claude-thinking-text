@@ -1,37 +1,59 @@
-# Spincraft
+<p align="center">
+  <h1 align="center">Spincraft</h1>
+  <p align="center">
+    AI-generated spinner verbs for Claude Code, tailored to your personality.
+    <br />
+    <br />
+    <a href="#installation">Install</a>
+    &middot;
+    <a href="#usage">Usage</a>
+    &middot;
+    <a href="https://github.com/thebestmensch/spincraft/issues">Report Bug</a>
+  </p>
+</p>
 
-A Claude Code plugin that generates personalized spinner verbs using AI. Instead of picking from a hardcoded list, Claude asks you a few questions about your vibe, interests, and preferences — then generates a custom set of spinner verbs tailored to you.
+## About
 
-## What are spinner verbs?
+Claude Code shows rotating phrases while it thinks — "Reasoning...", "Analyzing...", etc. Since v2.1.23, you can [customize these](https://code.claude.com/docs/en/settings) in `~/.claude/settings.json`.
 
-Spinner verbs are the rotating phrases Claude Code shows while it's thinking — "Reasoning...", "Analyzing...", etc. Since v2.1.23, you can customize these in `~/.claude/settings.json`. This plugin makes that fun and easy.
+Most people pick from a hardcoded list. **Spincraft** generates them for you. It asks a few questions about your vibe, interests, and preferences, then creates a set of spinner verbs that actually feel like yours.
 
-## Install
+No API keys. No dependencies. Claude Code is the AI.
 
-### From a marketplace
+## Installation
+
+### Plugin marketplace
 
 ```bash
 claude plugin install spincraft
 ```
 
-### Manual install
-
-Clone this repo and load it directly:
+### Manual (git clone)
 
 ```bash
 git clone https://github.com/thebestmensch/spincraft.git
 claude --plugin-dir ./spincraft
 ```
 
-## Usage
+### Manual (no git, no marketplace)
 
-Once the plugin is loaded, run:
+If you can't install plugins or clone repos (e.g. locked-down corporate environment), you can copy the skill file directly:
+
+```bash
+mkdir -p ~/.claude/skills/spincraft-generate
+```
+
+Then create `~/.claude/skills/spincraft-generate/SKILL.md` with the contents of [`skills/generate/SKILL.md`](skills/generate/SKILL.md) from this repo.
+
+This registers it as a personal skill at `/spincraft-generate` instead of `/spincraft:generate` — same functionality, no plugin install required.
+
+## Usage
 
 ```
 /spincraft:generate
 ```
 
-Or pass a theme to get started faster:
+Or pass a theme to skip the first question:
 
 ```
 /spincraft:generate pirate
@@ -39,25 +61,26 @@ Or pass a theme to get started faster:
 /spincraft:generate 90s hip-hop
 ```
 
-Claude will:
+### What happens
 
-1. Ask you a few questions about your vibe and interests
-2. Generate 20-30 custom spinner verbs
-3. Let you iterate until you're happy
-4. Write them to your `~/.claude/settings.json`
+1. Claude asks you a few questions about your vibe and interests
+2. Generates 20–30 custom spinner verbs
+3. Lets you iterate until you're happy
+4. Writes them to `~/.claude/settings.json`
+5. Restart Claude Code to see your new verbs
 
-Restart Claude Code after generating to see your new verbs in action.
+### Modes
 
-## Modes
+You'll be asked to choose a mode before writing:
 
-When installing your verbs, you'll be asked to choose:
+| Mode | Behavior |
+|------|----------|
+| `replace` | Only your custom verbs are shown |
+| `append` | Your verbs are mixed in with Claude's defaults |
 
-- **replace** — Only your custom verbs are shown (Claude's defaults are removed)
-- **append** — Your verbs are mixed in with Claude's defaults
+## Example
 
-## Example output
-
-After telling Claude you're into space and want a chill vibe, you might get:
+> **Vibe:** chill · **Interests:** space, astronomy · **Avoid:** nothing specific
 
 ```
 Orbiting the problem
@@ -72,9 +95,12 @@ Entering the atmosphere
 
 ## Requirements
 
-- Claude Code v2.1.23 or later
-- That's it. No API keys, no dependencies. Claude Code is the AI.
+- [Claude Code](https://code.claude.com) v2.1.23 or later
+
+## Contributing
+
+Contributions are welcome. Open an issue or submit a pull request.
 
 ## License
 
-MIT
+Distributed under the MIT License. See [`LICENSE`](LICENSE) for details.
