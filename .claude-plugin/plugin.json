@@ -1,8 +1,12 @@
 {
-  "name": "spinner-verbs",
+  "name": "spincraft",
   "description": "Generate AI-powered custom spinner verbs for Claude Code, tailored to your personality and interests",
   "version": "1.0.0",
   "author": {
-    "name": "jm"
-  }
+    "name": "James Mensch",
+    "email": "james@jamesmensch.com"
+  },
+  "repository": "https://github.com/thebestmensch/spincraft",
+  "license": "MIT",
+  "keywords": ["spinner", "spinnerVerbs", "customization", "personalization"]
 }

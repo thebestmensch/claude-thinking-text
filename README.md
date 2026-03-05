@@ -1,4 +1,4 @@
-# Spinner Verbs Generator
+# Spincraft
 
 A Claude Code plugin that generates personalized spinner verbs using AI. Instead of picking from a hardcoded list, Claude asks you a few questions about your vibe, interests, and preferences — then generates a custom set of spinner verbs tailored to you.
 
@@ -11,7 +11,7 @@ Spinner verbs are the rotating phrases Claude Code shows while it's thinking —
 ### From a marketplace
 
 ```bash
-claude plugin install spinner-verbs
+claude plugin install spincraft
 ```
 
 ### Manual install
@@ -19,8 +19,8 @@ claude plugin install spinner-verbs
 Clone this repo and load it directly:
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/spinner-verbs-plugin.git
-claude --plugin-dir ./spinner-verbs-plugin
+git clone https://github.com/thebestmensch/spincraft.git
+claude --plugin-dir ./spincraft
 ```
 
 ## Usage
@@ -28,15 +28,15 @@ claude --plugin-dir ./spinner-verbs-plugin
 Once the plugin is loaded, run:
 
 ```
-/spinner-verbs:generate
+/spincraft:generate
 ```
 
 Or pass a theme to get started faster:
 
 ```
-/spinner-verbs:generate pirate
-/spinner-verbs:generate cooking
-/spinner-verbs:generate 90s hip-hop
+/spincraft:generate pirate
+/spincraft:generate cooking
+/spincraft:generate 90s hip-hop
 ```
 
 Claude will:
