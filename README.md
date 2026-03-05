@@ -22,13 +22,7 @@ No API keys. No dependencies. Claude Code is the AI.
 
 ## Installation
 
-### Plugin marketplace
-
-```bash
-claude plugin install spincraft
-```
-
-### Manual (git clone)
+### Git clone (recommended)
 
 ```bash
 git clone https://github.com/thebestmensch/spincraft.git
