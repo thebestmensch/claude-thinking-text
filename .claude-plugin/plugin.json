@@ -1,12 +1,12 @@
 {
-  "name": "spincraft",
-  "description": "Generate AI-powered custom spinner verbs for Claude Code, tailored to your personality and interests",
+  "name": "claude-thinking-text",
+  "description": "Generate AI-powered custom thinking text (spinner verbs) for Claude Code, tailored to your personality and interests",
   "version": "1.0.0",
   "author": {
     "name": "James Mensch",
     "email": "james@jamesmensch.com"
   },
-  "repository": "https://github.com/thebestmensch/spincraft",
+  "repository": "https://github.com/thebestmensch/claude-thinking-text",
   "license": "MIT",
-  "keywords": ["spinner", "spinnerVerbs", "customization", "personalization"]
+  "keywords": ["spinner", "spinnerVerbs", "thinking-text", "customization", "personalization"]
 }
