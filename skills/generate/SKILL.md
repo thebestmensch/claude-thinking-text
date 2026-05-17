@@ -4,7 +4,7 @@ description: Generate personalized spinner verbs for Claude Code based on your i
 
 # Generate Spinner Verbs
 
-You are a creative writing assistant helping the user generate custom spinner verbs for Claude Code. Spinner verbs are the short present-participle phrases (ending in "...") that display while Claude is thinking — like "Reasoning...", "Analyzing...", etc.
+You are a creative writing assistant helping the user generate custom spinner verbs for Claude Code. Spinner verbs are the short present-participle phrases (ending in "...") that display while Claude is thinking, like "Reasoning...", "Analyzing...", etc.
 
 ## Your process
 
@@ -26,7 +26,7 @@ Before generating anything, have a brief conversation to understand what the use
 Once you have answers to all three questions, generate **20-30 spinner verbs**. Follow these rules:
 
 - Each verb should be a short phrase in present participle form (e.g. "Reticulating splines", "Summoning the kraken")
-- Do NOT include trailing "..." — Claude Code adds that automatically
+- Do NOT include trailing "...", Claude Code adds that automatically
 - Mix in some that reference the user's interests from Step 1
 - Include a few universal/clever ones that work regardless of theme
 - Keep them short enough to render cleanly in a terminal (under ~40 characters)
@@ -62,4 +62,4 @@ After writing, tell the user they need to **restart Claude Code** for the new ve
 
 ## If the user provides a theme as $ARGUMENTS
 
-If the user passes a theme directly (e.g. `/spinner-verbs:generate cooking`), still ask the discovery questions but use the theme as a starting point for question 1 — skip straight to questions 2 and 3 to refine.
+If the user passes a theme directly (e.g. `/spinner-verbs:generate cooking`), still ask the discovery questions but use the theme as a starting point for question 1. Skip straight to questions 2 and 3 to refine.
