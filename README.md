@@ -14,7 +14,7 @@
 
 ## About
 
-Claude Code shows rotating phrases while it thinks — "Reasoning...", "Analyzing...", etc. Since v2.1.23, you can [customize these](https://code.claude.com/docs/en/settings) in `~/.claude/settings.json` via the `spinnerVerbs` setting.
+Claude Code shows rotating phrases while it thinks ("Reasoning...", "Analyzing...", etc). Since v2.1.23, you can [customize these](https://code.claude.com/docs/en/settings) in `~/.claude/settings.json` via the `spinnerVerbs` setting.
 
 Most people pick from a hardcoded list. **Claude Thinking Text** generates them for you. It asks a few questions about your vibe, interests, and preferences, then creates a set of spinner verbs that actually feel like yours.
 
@@ -39,7 +39,7 @@ mkdir -p ~/.claude/skills/thinking-text-generate
 
 Then create `~/.claude/skills/thinking-text-generate/SKILL.md` with the contents of [`skills/generate/SKILL.md`](skills/generate/SKILL.md) from this repo.
 
-This registers it as a personal skill at `/thinking-text-generate` instead of `/claude-thinking-text:generate` — same functionality, no plugin install required.
+This registers it as a personal skill at `/thinking-text-generate` instead of `/claude-thinking-text:generate`. Same functionality, no plugin install required.
 
 ## Usage
 
